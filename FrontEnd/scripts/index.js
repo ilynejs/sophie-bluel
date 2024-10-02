@@ -6,30 +6,43 @@ import {
 	showAdminElements,
 	logout,
 } from './adminFunctions.js';
+import { buildWorkModal } from './modal.js';
 
 const init = async () => {
-	const user = JSON.parse(localStorage.getItem('user'));
-
 	const logoutButton = document.querySelector('#logout');
 	logoutButton.addEventListener('click', () => {
 		logout();
 	});
 
-	if (isUserConnected()) {
-		console.log(user);
-		showAdminElements();
-	} else {
-		hideAdminElements();
-	}
+	let works = [];
+	let categories = [];
 
 	try {
-		const works = await fetchWorks();
-		const categories = await fetchCategories();
+		works = await fetchWorks();
+		categories = await fetchCategories();
 
 		displayWorks(works);
 		displayCategoriesFilters(categories, works);
+
+		const modifyWorksButton = document.querySelector('#modify-works');
+
+		modifyWorksButton.addEventListener('click', () => {
+			buildWorkModal(works);
+		});
 	} catch (error) {
 		console.error("Erreur lors de l'initialisation:", error);
+	}
+
+	if (isUserConnected()) {
+		showAdminElements();
+
+		const modifyWorksButton = document.querySelector('#modify-works');
+
+		modifyWorksButton.addEventListener('click', () => {
+			buildWorkModal(works);
+		});
+	} else {
+		hideAdminElements();
 	}
 };
 
