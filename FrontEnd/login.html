@@ -12,53 +12,76 @@
 		/>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="./assets/style.css" />
-		<script src="./scripts/index.js" type="module" defer></script>
+		<script src="./scripts/login.js" type="module" defer></script>
 	</head>
 	<body>
-		<header>
-			<a href="./index.html">
-				<h1>
-					Sophie Bluel
-					<span>Architecte d'intérieur</span>
-				</h1>
-			</a>
+		<div class="admin edition-header">
+			<p>
+				<span class="icon">
+					<img
+						src="./assets/icons/white_edition_icon.png"
+						alt="icone d'édition"
+					/>
+				</span>
+				Mode édition
+			</p>
+		</div>
 
-			<nav>
-				<ul>
-					<li><a href="./index.html#portfolio">portfolio</a></li>
-					<li><a href="./index.html#contact">contact</a></li>
-					<li><a class="active" href="./login.html">login</a></li>
-					<li>
-						<img
-							src="./assets/icons/instagram.png"
-							alt="Instagram"
-						/>
-					</li>
-				</ul>
-			</nav>
-		</header>
+		<div class="center">
+			<header>
+				<a href="./index.html">
+					<h1>
+						Sophie Bluel
+						<span>Architecte d'intérieur</span>
+					</h1>
+				</a>
 
-		<main>
-			<section class="login-section">
-				<h2>Log In</h2>
-				<form class="login-form" action="#" method="post">
-					<label>
-						Email
-						<input type="email" name="email" id="email" />
-					</label>
+				<nav>
+					<ul>
+						<li><a href="./index.html#portfolio">portfolio</a></li>
+						<li><a href="./index.html#contact">contact</a></li>
+						<li class="visitor">
+							<a class="active" href="./login.html">login</a>
+						</li>
+						<li class="admin" id="logout">
+							<p>logout</p>
+						</li>
+						<li class="instagram-icon">
+							<img
+								src="./assets/icons/instagram.png"
+								alt="Instagram"
+							/>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-					<label>
-						Mot de passe
-						<input type="password" name="password" id="password" />
-					</label>
+			<main>
+				<section class="login-section">
+					<h2>Log In</h2>
+					<form class="login-form" action="#" method="post">
+						<label>
+							Email
+							<input type="email" name="email" id="email" />
+						</label>
 
-					<input type="submit" value="Se connecter" />
+						<label>
+							Mot de passe
+							<input
+								type="password"
+								name="password"
+								id="password"
+							/>
+						</label>
 
-					<a href="#"><u>Mot de passe oublié</u></a>
-					<p class="error"></p>
-				</form>
-			</section>
-		</main>
+						<input type="submit" value="Se connecter" />
+
+						<a href="#"><u>Mot de passe oublié</u></a>
+						<p class="error"></p>
+					</form>
+				</section>
+			</main>
+		</div>
 
 		<footer>
 			<nav>
