@@ -142,17 +142,62 @@ button {
 }
 /** end reset css**/
 body {
-	max-width: 1140px;
-	margin: auto;
 	font-family: 'Work Sans';
 	font-size: 14px;
+
+	background: #fffef8;
 }
+
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	max-width: 956px;
+}
+
+.edition-header {
+	position: relative;
+
+	width: 100%;
+	height: 60px;
+
+	background-color: #000000;
+	color: white;
+}
+
+.edition-header p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.edition-header p .icon {
+	width: 15px;
+	height: 15px;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0;
+
+	width: 100%;
+	max-width: 1140px;
 }
+
 section {
+	width: 100%;
 	margin: 50px 0;
 }
 
@@ -185,6 +230,12 @@ nav ul {
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+	cursor: pointer;
+}
+
+nav li.instagram-icon img {
+	width: 22px;
+	height: 22px;
 }
 
 li:hover {
@@ -198,6 +249,10 @@ a.active {
 #introduction {
 	display: flex;
 	align-items: center;
+
+	gap: 70px;
+
+	line-height: 16px;
 }
 #introduction figure {
 	flex: 1;
@@ -205,7 +260,7 @@ a.active {
 #introduction img {
 	display: block;
 	margin: auto;
-	width: 80%;
+	width: 100%;
 }
 
 #introduction article {
@@ -218,9 +273,18 @@ a.active {
 #introduction p {
 	margin-bottom: 0.5em;
 }
-#portfolio h2 {
+#portfolio .title-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+
+	margin: 100px 0 50px;
+	width: 100%;
+}
+
+#portfolio .title-box h2 {
 	text-align: center;
-	margin-bottom: 1em;
 }
 
 .categories-filters {
@@ -307,6 +371,15 @@ input[type='submit'],
 	border-radius: 60px;
 }
 
+footer {
+	background: #ffffff;
+	height: fit-content;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
@@ -347,4 +420,9 @@ footer nav ul {
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.error {
+	color: red;
+	font-size: 1.2em;
 }
