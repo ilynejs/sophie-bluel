@@ -8,15 +8,12 @@ import {
 const loginForm = document.querySelector('.login-form');
 const errorMessage = document.querySelector('.error');
 
-const user = JSON.parse(localStorage.getItem('user'));
-
 const logoutButton = document.querySelector('#logout');
 logoutButton.addEventListener('click', () => {
 	logout();
 });
 
 if (isUserConnected()) {
-	console.log(user);
 	showAdminElements();
 } else {
 	hideAdminElements();
