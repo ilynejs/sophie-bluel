@@ -15,88 +15,122 @@
 		<script src="./scripts/index.js" type="module" defer></script>
 	</head>
 	<body>
-		<header>
-			<a href="./index.html">
-				<h1>
-					Sophie Bluel
-					<span>Architecte d'intérieur</span>
-				</h1>
-			</a>
+		<div class="admin edition-header">
+			<p>
+				<span class="icon">
+					<img
+						src="./assets/icons/white_edition_icon.png"
+						alt="icone d'édition"
+					/>
+				</span>
+				Mode édition
+			</p>
+		</div>
 
-			<nav>
-				<ul>
-					<li><a href="#portfolio">portfolio</a></li>
-					<li><a href="#contact">contact</a></li>
-					<li><a href="./login.html">login</a></li>
-					<li>
-						<img
-							src="./assets/icons/instagram.png"
-							alt="Instagram"
-						/>
-					</li>
-				</ul>
-			</nav>
-		</header>
+		<div class="center">
+			<header>
+				<a href="./index.html">
+					<h1>
+						Sophie Bluel
+						<span>Architecte d'intérieur</span>
+					</h1>
+				</a>
 
-		<main>
-			<section id="introduction">
-				<figure>
-					<img src="./assets/images/sophie-bluel.png" alt="" />
-				</figure>
+				<nav>
+					<ul>
+						<li><a href="./index.html#portfolio">portfolio</a></li>
+						<li><a href="./index.html#contact">contact</a></li>
+						<li class="visitor">
+							<a href="./login.html">login</a>
+						</li>
+						<li class="admin" id="logout">
+							<p>logout</p>
+						</li>
+						<li class="instagram-icon">
+							<img
+								src="./assets/icons/instagram.png"
+								alt="Instagram"
+							/>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-				<article>
-					<h2>Designer d'espace</h2>
-					<p>
-						Je raconte votre histoire, je valorise vos idées. Je
-						vous accompagne de la conception à la livraison finale
-						du chantier.
-					</p>
-					<p>
-						Chaque projet sera étudié en commun, de façon à mettre
-						en valeur les volumes, les matières et les couleurs dans
-						le respect de l’esprit des lieux et le choix adapté des
-						matériaux. Le suivi du chantier sera assuré dans le
-						souci du détail, le respect du planning et du budget.
-					</p>
-					<p>
-						En cas de besoin, une équipe pluridisciplinaire
-						peut-être constituée : architecte DPLG,
-						décorateur(trice)
-					</p>
-				</article>
-			</section>
+			<main>
+				<section id="introduction">
+					<figure>
+						<img src="./assets/images/sophie-bluel.png" alt="" />
+					</figure>
 
-			<section id="portfolio">
-				<h2>Mes Projets</h2>
+					<article>
+						<h2>Designer d'espace</h2>
+						<p>
+							Je raconte votre histoire, je valorise vos idées. Je
+							vous accompagne de la conception à la livraison
+							finale du chantier.
+						</p>
+						<br />
+						<p>
+							Chaque projet sera étudié en commun, de façon à
+							mettre en valeur les volumes, les matières et les
+							couleurs dans le respect de l’esprit des lieux et le
+							choix adapté des matériaux. Le suivi du chantier
+							sera assuré dans le souci du détail, le respect du
+							planning et du budget.
+						</p>
+						<br />
+						<p>
+							En cas de besoin, une équipe pluridisciplinaire
+							peut-être constituée : architecte DPLG,
+							décorateur(trice)
+						</p>
+					</article>
+				</section>
 
-				<ul class="categories-filters">
-					<!-- Boutons de tri affichés dynamiquement -->
-				</ul>
+				<section id="portfolio">
+					<div class="title-box">
+						<h2>Mes Projets</h2>
 
-				<div class="gallery">
-					<!-- Gallery des travaux affichée dynamiquement -->
-				</div>
-			</section>
+						<button class="admin">
+							<span class="icon">
+								<img
+									src="./assets/icons/black_edition_icon.png"
+									alt="icone d'édition"
+								/>
+							</span>
+							Modifier
+						</button>
+					</div>
 
-			<section id="contact">
-				<h2>Contact</h2>
-				<p>Vous avez un projet ? Discutons-en !</p>
-				<form action="#" method="post">
-					<label for="name">Nom</label>
-					<input type="text" name="name" id="name" />
-					<label for="email">Email</label>
-					<input type="email" name="email" id="email" />
-					<label for="message">Message</label>
-					<textarea
-						name="message"
-						id="message"
-						cols="30"
-						rows="10"
-					></textarea>
-					<input type="submit" value="Envoyer" />
-				</form>
-			</section>
-		</main>
+					<ul class="visitor visitor-flex categories-filters">
+						<!-- Boutons de tri affichés dynamiquement -->
+					</ul>
+
+					<div class="gallery">
+						<!-- Gallery des travaux affichée dynamiquement -->
+					</div>
+				</section>
+
+				<section id="contact">
+					<h2>Contact</h2>
+					<p>Vous avez un projet ? Discutons-en !</p>
+					<form action="#" method="post">
+						<label for="name">Nom</label>
+						<input type="text" name="name" id="name" />
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+						<label for="message">Message</label>
+						<textarea
+							name="message"
+							id="message"
+							cols="30"
+							rows="10"
+						></textarea>
+						<input type="submit" value="Envoyer" />
+					</form>
+				</section>
+			</main>
+		</div>
 
 		<footer>
 			<nav>
