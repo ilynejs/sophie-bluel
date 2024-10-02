@@ -9,6 +9,7 @@ const displayWorks = (works) => {
 		const workImg = document.createElement('img');
 		const workCaption = document.createElement('figcaption');
 
+		workFigure.setAttribute('work-id', work.id);
 		workImg.src = work.imageUrl;
 		workImg.alt = work.title;
 		workCaption.textContent = work.title;

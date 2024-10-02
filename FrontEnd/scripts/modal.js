@@ -108,13 +108,26 @@ const deleteWork = async (workId, item) => {
 			},
 		});
 		if (res.ok) {
-			console.log(item);
-			item.parentElement.removeChild(item);
+			item.remove();
+
+			removeWorkFromGallery(workId);
 		} else {
 			console.error('Erreur lors de la suppression du travail');
 		}
 	} catch (error) {
 		console.error(error);
+	}
+};
+
+const removeWorkFromGallery = (workId) => {
+	const gallery = document.querySelector('.gallery');
+	const works = gallery.querySelectorAll('figure');
+
+	for (const work of works) {
+		const workIdAttr = work.getAttribute('work-id');
+		if (workIdAttr === workId) {
+			work.remove();
+		}
 	}
 };
 
