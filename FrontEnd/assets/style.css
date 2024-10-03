@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+	box-sizing: border-box;
+}
 
 html,
 body,
@@ -553,7 +556,7 @@ footer nav ul {
 	height: 11px;
 }
 
-.add-btn {
+.switch-add-btn {
 	background-color: #1d6154;
 	color: white;
 	font-family: 'Syne';
@@ -562,4 +565,133 @@ footer nav ul {
 
 	padding: 10px 50px;
 	border-radius: 60px;
+}
+
+.add-photo-modal .modal-content form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	gap: 30px;
+}
+
+.add-photo-modal .modal-content form .image-label {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+
+	width: 100%;
+	height: fit-content;
+	min-height: 172px;
+
+	padding: 20px;
+	border-radius: 3px;
+
+	background: #e8f1f6;
+}
+
+.add-photo-modal .modal-content form .image-label img {
+	width: 76px;
+	height: 76px;
+}
+
+.add-photo-modal .modal-content form .image-label input[type='file'] {
+	display: none;
+}
+
+.add-photo-modal .modal-content form .image-label .fake-button {
+	font-weight: 500;
+	font-size: 14px;
+
+	padding: 10px 33px;
+	border-radius: 60px;
+
+	background-color: #cbd6dc;
+	color: #306685;
+
+	cursor: pointer;
+}
+
+.add-photo-modal .modal-content form .image-label .details {
+	font-size: 10px;
+	color: #444444;
+}
+
+.add-photo-modal .modal-content form label {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+
+	width: 100%;
+}
+
+.add-photo-modal .modal-content form label input {
+	height: 50px;
+	width: 100%;
+
+	padding: 0 16px;
+
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.add-photo-modal .modal-content form select {
+	height: 50px;
+	width: 100%;
+
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+
+	padding: 0 16px;
+}
+
+.add-photo-modal .modal-content form hr {
+	margin: 30px 0 0 0;
+	/* margin: 0; */
+}
+
+.add-photo-modal .modal-content form input[type='submit'].disabled {
+	background-color: #a7a7a7;
+	cursor: not-allowed;
+}
+
+.add-photo-modal .modal-content form input[type='submit'] {
+	margin: 2em auto;
+	width: 237px;
+	padding: 10px 30px;
+	border-radius: 60px;
+
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	background-color: #1d6154;
+
+	border: none;
+	cursor: pointer;
+}
+
+.add-photo-modal .modal-content form img.image-preview {
+	display: none;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	height: 100%;
+	width: auto;
+	/* height: auto; */
+	/* width: 129px; */
+	object-fit: cover;
+
+	cursor: pointer;
 }
