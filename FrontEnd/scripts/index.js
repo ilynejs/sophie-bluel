@@ -26,8 +26,9 @@ const init = async () => {
 
 		const modifyWorksButton = document.querySelector('#modify-works');
 
-		modifyWorksButton.addEventListener('click', () => {
-			buildWorkModal(works);
+		modifyWorksButton.addEventListener('click', async () => {
+			works = await fetchWorks();
+			buildWorkModal(works, categories);
 		});
 	} catch (error) {
 		console.error("Erreur lors de l'initialisation:", error);
@@ -35,12 +36,6 @@ const init = async () => {
 
 	if (isUserConnected()) {
 		showAdminElements();
-
-		const modifyWorksButton = document.querySelector('#modify-works');
-
-		modifyWorksButton.addEventListener('click', () => {
-			buildWorkModal(works);
-		});
 	} else {
 		hideAdminElements();
 	}
