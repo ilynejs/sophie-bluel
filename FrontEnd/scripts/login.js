@@ -56,7 +56,8 @@ const handleLogin = async (email, password) => {
 			localStorage.setItem('user', JSON.stringify(user));
 			window.location.href = './index.html';
 		} else {
-			errorMessage.textContent = data.message;
+			errorMessage.textContent =
+				'Erreur dans l’identifiant ou le mot de passe';
 		}
 	} catch (error) {
 		console.error(error);
