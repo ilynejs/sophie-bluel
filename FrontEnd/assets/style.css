@@ -266,6 +266,7 @@ a.active {
 #introduction img {
 	display: block;
 	margin: auto;
+
 	width: 100%;
 }
 
@@ -334,6 +335,26 @@ li.category-filter button:hover {
 .gallery img {
 	width: 100%;
 }
+
+.gallery figure {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+	min-height: 408.79px;
+}
+
+.gallery figure img {
+	flex-grow: 1;
+
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery figure figcaption {
+	margin-top: 7px;
+}
+
 #contact {
 	width: 50%;
 	margin: auto;
@@ -375,6 +396,8 @@ input[type='submit'],
 	width: 180px;
 	text-align: center;
 	border-radius: 60px;
+
+	cursor: pointer;
 }
 
 footer {
@@ -509,6 +532,12 @@ footer nav ul {
 
 	width: 420px;
 	margin: 0 80px 15px 80px;
+}
+
+.modal-content li > img {
+	height: 100%;
+	min-height: 105.61px;
+	object-fit: cover;
 }
 
 .modal-divider {
