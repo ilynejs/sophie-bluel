@@ -292,7 +292,7 @@ const setupImageUpload = (modalContent) => {
 const isFormValid = (form) => {
 	return (
 		form.querySelector('#image-input').files.length > 0 &&
-		form.querySelector('#title').value !== '' &&
+		form.querySelector('#title').trim().value !== '' &&
 		form.querySelector('#category').value !== ''
 	);
 };
